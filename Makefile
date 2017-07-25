@@ -11,8 +11,6 @@ HTML_FILES = user_howto.html\
 	logout.html\
 	donation.html
  
- js_files := $(shell find site/js -maxdepth 1 -type f -name '*.js' -printf '%f\n')
- 
 js_files := $(shell find site/js -maxdepth 1 -type f -name '*.js' -printf '%f\n')
 
 js_test_files := $(shell find site/test/end2endTests -maxdepth 1 -type f -name '*.js' -printf '%f\n')

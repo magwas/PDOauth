@@ -1,4 +1,5 @@
 import os
+import sys
 import logging
 from selenium.webdriver.chrome.options import Options
 from selenium import webdriver
@@ -28,7 +29,7 @@ def getDriver():
         profile = FirefoxProfile(profile_directory)
         profile.set_preference('webdriver.log.file', '/tmp/firefox_console')
         profile.set_preference("security.default_personal_cert", "Select Automatically")
-        theDriver = webdriver.Firefox(firefox_profile=profile, capabilities=d)
+        theDriver = webdriver.Firefox(firefox_profile=profile, capabilities=d,log_path="")
     return theDriver
 
 def getApplication():

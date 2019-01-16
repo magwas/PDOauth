@@ -1,12 +1,8 @@
 #!/bin/bash
 set -xe
 chown postgres /var/run/postgresql/
-apt update
-#apt -y --allow-downgrades install chromium-chromedriver=49.0.2623.108-0ubuntu1.1233 chromium-browser=49.0.2623.108-0ubuntu1.1233 chromium-codecs-ffmpeg=49.0.2623.108-0ubuntu1.1233
-apt -y install nodejs-legacy npm
-npm install -g rollup
-npm install jsdom qunit-cli
-pip install j2cli
+rm -rf node_modules
+ln -s /usr/local/lib/node_modules .
 
 export DISPLAY=:0
 Xvnc -SecurityTypes=None :0&

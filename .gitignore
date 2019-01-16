@@ -22,3 +22,7 @@ static/bootstrap.min.js
 /static/assurers.json
 /static/mailbox
 /site/js/modules/adauris.js
+node_modules
+node_modules/
+jsunit/
+geckodriver.log
